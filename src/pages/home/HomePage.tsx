@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+// Component
 import Navbar from '../../components/nav/Navbar';
+// Context
+import { useUser } from '../../context/UserContext';
 
 const HomePage: React.FC = () => {
+  const { user, setUser } = useUser();
+
   const [number, setNumber] = useState(1);
 
   const increment = () => setNumber((prevNumber) => prevNumber + 1);
@@ -14,7 +19,7 @@ const HomePage: React.FC = () => {
       <Navbar />
 
       <main>
-        <h1>Welcome to My React App</h1>
+        <h1>Welcome to My React App {user?.name}</h1>
         <p>This is a simple home page built with React and TypeScript.</p>
 
         <div className='counter'>

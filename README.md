@@ -9,4 +9,7 @@
 5. install tailwind if needed
 6. Create a pages folder and add pages
 7. Add page route to app.tsx
-8. 
+
+useContext = to pass stored data to any page or component - i.e the user
+useEffect = to run on load and update
+useState = store state update with setState
